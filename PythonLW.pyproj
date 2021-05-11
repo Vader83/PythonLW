@@ -1,0 +1,170 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>PythonLW</Name>
+    <RootNamespace>PythonLW</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>ad98d458-23e7-4983-8a43-e2855cb92d77</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <DjangoSettingsModule>PythonLW.settings</DjangoSettingsModule>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="manage.py" />
+    <Compile Include="PythonLW\__init__.py" />
+    <Compile Include="PythonLW\settings.py" />
+    <Compile Include="PythonLW\urls.py" />
+    <Compile Include="PythonLW\wsgi.py" />
+    <Compile Include="SocialApp\admin.py" />
+    <Compile Include="SocialApp\apps.py" />
+    <Compile Include="SocialApp\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SocialApp\migrations\__init__.py" />
+    <Compile Include="SocialApp\models.py" />
+    <Compile Include="SocialApp\tests.py" />
+    <Compile Include="SocialApp\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SocialApp\views.py" />
+    <Compile Include="SocialApp\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="requirements.txt" />
+    <Content Include="SocialApp\static\assets\bootstrap\css\bootstrap.min.css" />
+    <Content Include="SocialApp\static\assets\bootstrap\js\bootstrap.min.js" />
+    <Content Include="SocialApp\static\assets\css\Footer-Basic.css" />
+    <Content Include="SocialApp\static\assets\css\Header-Dark.css" />
+    <Content Include="SocialApp\static\assets\css\Index-Style.css" />
+    <Content Include="SocialApp\static\assets\css\Login-Form-Dark.css" />
+    <Content Include="SocialApp\static\assets\css\News-Basic.css" />
+    <Content Include="SocialApp\static\assets\css\Registration-Form-with-Photo.css" />
+    <Content Include="SocialApp\static\assets\css\Social-Icons.css" />
+    <Content Include="SocialApp\static\assets\fonts\fa-brands-400.eot" />
+    <Content Include="SocialApp\static\assets\fonts\fa-brands-400.svg" />
+    <Content Include="SocialApp\static\assets\fonts\fa-brands-400.ttf" />
+    <Content Include="SocialApp\static\assets\fonts\fa-brands-400.woff" />
+    <Content Include="SocialApp\static\assets\fonts\fa-brands-400.woff2" />
+    <Content Include="SocialApp\static\assets\fonts\fa-regular-400.eot" />
+    <Content Include="SocialApp\static\assets\fonts\fa-regular-400.svg" />
+    <Content Include="SocialApp\static\assets\fonts\fa-regular-400.ttf" />
+    <Content Include="SocialApp\static\assets\fonts\fa-regular-400.woff" />
+    <Content Include="SocialApp\static\assets\fonts\fa-regular-400.woff2" />
+    <Content Include="SocialApp\static\assets\fonts\fa-solid-900.eot" />
+    <Content Include="SocialApp\static\assets\fonts\fa-solid-900.svg" />
+    <Content Include="SocialApp\static\assets\fonts\fa-solid-900.ttf" />
+    <Content Include="SocialApp\static\assets\fonts\fa-solid-900.woff" />
+    <Content Include="SocialApp\static\assets\fonts\fa-solid-900.woff2" />
+    <Content Include="SocialApp\static\assets\fonts\fontawesome-all.min.css" />
+    <Content Include="SocialApp\static\assets\fonts\ionicons.eot" />
+    <Content Include="SocialApp\static\assets\fonts\ionicons.min.css" />
+    <Content Include="SocialApp\static\assets\fonts\ionicons.svg" />
+    <Content Include="SocialApp\static\assets\fonts\ionicons.ttf" />
+    <Content Include="SocialApp\static\assets\fonts\ionicons.woff" />
+    <Content Include="SocialApp\static\assets\img\astronaut_logo.jpg" />
+    <Content Include="SocialApp\static\assets\img\base.png" />
+    <Content Include="SocialApp\static\assets\img\index.png" />
+    <Content Include="SocialApp\static\assets\img\log_in.jpg" />
+    <Content Include="SocialApp\static\assets\img\mountain_bg.jpg" />
+    <Content Include="SocialApp\static\assets\img\news.jpg" />
+    <Content Include="SocialApp\static\assets\img\news_avatar.jpg" />
+    <Content Include="SocialApp\static\assets\img\register_bg.png" />
+    <Content Include="SocialApp\static\assets\img\screen-content-iphone-6.jpg" />
+    <Content Include="SocialApp\static\assets\img\Test-Site_Dan-Flavin_Untitled-featured.jpg" />
+    <Content Include="SocialApp\static\assets\js\jquery.min.js" />
+    <Content Include="SocialApp\templates\SocialApp\Base.html" />
+    <Content Include="SocialApp\templates\SocialApp\Create_News.html" />
+    <Content Include="SocialApp\templates\SocialApp\Index.html" />
+    <Content Include="SocialApp\templates\SocialApp\Log_In.html" />
+    <Content Include="SocialApp\templates\SocialApp\News.html" />
+    <Content Include="SocialApp\templates\SocialApp\profile.html" />
+    <Content Include="SocialApp\templates\SocialApp\Sign_Up.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PythonLW\" />
+    <Folder Include="SocialApp\" />
+    <Folder Include="SocialApp\migrations\" />
+    <Folder Include="SocialApp\static\" />
+    <Folder Include="SocialApp\static\assets\" />
+    <Folder Include="SocialApp\static\assets\bootstrap\" />
+    <Folder Include="SocialApp\static\assets\bootstrap\css\" />
+    <Folder Include="SocialApp\static\assets\bootstrap\js\" />
+    <Folder Include="SocialApp\static\assets\css\" />
+    <Folder Include="SocialApp\static\assets\fonts\" />
+    <Folder Include="SocialApp\static\assets\img\" />
+    <Folder Include="SocialApp\static\assets\js\" />
+    <Folder Include="SocialApp\templates\" />
+    <Folder Include="SocialApp\templates\SocialApp\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.9</Version>
+      <Description>env (Python 3.9 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

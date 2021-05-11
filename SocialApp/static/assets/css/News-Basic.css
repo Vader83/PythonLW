@@ -1,0 +1,34 @@
+.btn.rounded {
+  border-radius: 10px!important;
+  margin-top: 20px;
+}
+
+.media.border.rounded {
+  border-radius: 10px!important;
+  margin-top: 20px;
+}
+
+.news-create.body-background {
+  background-image: url("../../assets/img/index.png");
+  background-size: 100%;
+}
+
+.news-create.main {
+  margin: 50px;
+  background-color: rgba(255,255,255,0);
+  padding: 5px;
+}
+
+.border.rounded {
+  margin: 19px;
+  background-color: #fea983;
+  padding: 20px;
+  font-size: 24px;
+}
+
+.news-create-body {
+  background-image: url("../../assets/img/index.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+

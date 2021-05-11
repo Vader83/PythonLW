@@ -1,0 +1,32 @@
+.main-header {
+  height: 120px;
+  background-image: url("../../assets/img/base.png");
+  background-position: 0% 21%;
+  background-size: 100%;
+}
+
+.header-dark {
+  background-size: cover;
+  padding-bottom: 80px;
+}
+
+.header-dark {
+  height: 120px;
+  background-color: transparent;
+}
+
+@media (min-width:768px) {
+  .header-dark .navbar {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+  }
+}
+
+.header-dark .navbar {
+  background: transparent;
+  color: #fff;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+}
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+{% extends 'SocialApp/Base.html' %}
+
+{% block content %}
+
+    <html>
+
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+            <title>Social</title>
+        </head>
+
+        <body class="news-create body-background">
+            <main class="news-create main">
+                <div class="border rounded">
+                    <div style="margin-top: 10px;margin-bottom: 10px;"><input type="text" placeholder="Input your subject" autocomplete="off" name="subject_field" style="width: 1340px;"></div>
+                    <div style="margin-top: 10px;margin-bottom: 10px;"><textarea name="news_field" placeholder="Input your news" required="" spellcheck="true" wrap="soft" maxlength="65536" style="width: 1340px;height: 250px;"></textarea></div><button class="btn btn-primary" type="submit" style="font-size: 24px;background-color: rgb(218,23,122);">Post news</button></div>
+            </main>
+        </body>
+
+    </html>
+
+{% endblock content %}

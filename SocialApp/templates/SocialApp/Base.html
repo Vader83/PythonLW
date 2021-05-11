@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html style="height: 300px;">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>Social</title>
+        {% load static %}
+        <link rel="stylesheet" href={% static 'assets/bootstrap/css/bootstrap.min.css' %}>
+        <link rel="stylesheet" href={% static 'https://fonts.googleapis.com/css?family=Bitter:400,700' %}>
+        <link rel="stylesheet" href={% static 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' %}>
+        <link rel="stylesheet" href={% static 'assets/fonts/fontawesome-all.min.css' %}>
+        <link rel="stylesheet" href={% static 'assets/fonts/ionicons.min.css' %}>
+        <link rel="stylesheet" href={% static 'assets/css/Footer-Basic.css' %}>
+        <link rel="stylesheet" href={% static 'assets/css/Header-Dark.css' %}>
+        <link rel="stylesheet" href={% static 'assets/css/Index-Style.css' %}>
+        <link rel="stylesheet" href={% static 'assets/css/Login-Form-Dark.css' %}>
+        <link rel="stylesheet" href={% static 'assets/css/News-Basic.css' %}>
+        <link rel="stylesheet" href={% static 'assets/css/Registration-Form-with-Photo.css' %}>
+        <link rel="stylesheet" href={% static 'assets/css/Social-Icons.css' %}>
+        <link rel="stylesheet" href={% static 'assets/css/Header_Base.css' %}>
+
+
+    </head>
+
+    <body style="background-color: rgba(0,0,0,0);">
+        <div class="main-header">
+            <div class="header-dark">
+                <nav class="navbar navbar-dark navbar-expand-lg header-dark navbar">
+                    <div class="container"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button><a class="navbar-brand" href="{% url 'social_news' %}" style="margin-left: 0px;">News</a>
+                        <div
+                            class="collapse navbar-collapse" id="navcol-1">
+                            <ul class="nav navbar-nav" style="margin-right: auto;">
+                                <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'social_create_news' %}">Create news</a></li>
+                            </ul><span class="navbar-text"><a class="login" href="{% url 'social_log_in' %}">Log In</a></span><a class="btn btn-light action-button" role="button" href="{% url 'social_sign_up' %}">Sign Up</a></div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        {% block content %}
+        {% endblock %}
+
+        <div class="footer-basic">
+            <footer>
+                <div class="social"><a href="#" style="width: 50px;height: 50px;color: rgb(40,103,165);background-color: #ffe500;"><i class="fab fa-python" style="font-size: 45px;padding: 2px;"></i></a></div>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="{% url 'social_home' %}">Home</a></li>
+                </ul>
+                <p class="copyright">Oleynik © 2021</p>
+            </footer>
+        </div>
+        <script src={% static 'assets/js/jquery.min.js' %}></script>
+        <script src={% static 'assets/bootstrap/js/bootstrap.min.js' %}></script>
+    </body>
+
+</html>
