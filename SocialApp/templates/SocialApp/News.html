@@ -13,30 +13,39 @@
             <title>Social</title>
         </head>
 
-        <body class="news-create-body">
+        <body class="news-create-body" style="background-repeat: repeat;">
             <main style="margin: 50px;">
-                <div style="margin-top: 10px;margin-bottom: 30px;"><button class="btn btn-primary border rounded" type="submit" style="font-size: 24px;background-color: rgb(11,254,224);color: rgb(0,0,0);">Create new post</button></div>
-                <div class="media border rounded" style="background-color: rgba(253,93,119,0.8);margin: 0px;margin-top: 20px;">
-                    <div style="margin: 10px;">
-                        <ul class="list-unstyled">
-                            <li class="d-xl-flex justify-content-xl-center align-items-xl-center"><img class="rounded-circle img-fluid d-xl-flex" style="max-width: 100px;" src={% static 'assets/img/news_avatar.jpg' %}></li>
-                            <li class="d-xl-flex justify-content-xl-center align-items-xl-center" style="font-size: 20px;"><em>Author_Name</em></li>
-                        </ul>
-                    </div>
+                <div style="margin-top: 10px;margin-bottom: 30px;"><a class="btn btn-primary border rounded" style="font-size: 24px;background-color: rgb(11,254,224);color: rgb(0,0,0);" role="button" href="{% url 'social_create_news' %}">Create new post</a></div>
+                <div>
+                    {% for new in news %}                  
+                        <div class="media border rounded" style="background-color: rgba(253,93,119,0.8);margin: 0px;margin-top: 20px;">
+                            <div style="margin: 10px;">
+                                <ul class="list-unstyled">
+                                    <li class="d-xl-flex justify-content-xl-center align-items-xl-center"><img class="rounded-circle img-fluid d-xl-flex" style="max-width: 100px;" src={% static 'assets/img/news_avatar.jpg' %}></li>
+                                    <li class="d-xl-flex justify-content-xl-center align-items-xl-center" style="font-size: 20px;"><em> {{ new.user }} </em></li>
+                                </ul>
+                            </div>
 
-                    <div class="media-body" style="margin: 10px;">
-                        <h5 style="margin-right: 16px;font-size: 32px;">Media Heading</h5>
-                        <p class="text-justify" style="margin-right: 16px;font-size: 24px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus nisl ac diam feugiat, non vestibulum libero posuere. Vivamus pharetra leo non nulla egestas, nec malesuada orci finibus. </p>
-                    </div>
+                            <div class="media-body" style="margin: 10px;">
+                                <h5 style="margin-right: 16px;font-size: 32px;"> {{ new.subject }} </h5>
+                                <p class="text-justify" style="margin-right: 16px;font-size: 24px;"> {{ new.text }} </p>
+                            </div>
+
+                        </div>
+                    {% endfor %}
+
+                    <nav style="margin-top: 20px;">               
+
+                        <form method="GET" action="{% url 'social_news' %}">                                            
+                            {% for num in page_count %}
+                                <button class="btn btn-primary" style="background-color: aqua; border-color: aqua; color: black;" name="page" type="submit" class="page-link" value="{{ num }}">{{ num }}</button>
+                            {% endfor %}
+                        </form>                  
+
+                    </nav>
 
                 </div>
-                <nav style="margin-top: 20px;">
-                    <ul class="pagination">
-                        <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
-                    </ul>
-                </nav>
+                
             </main>
         </body>
 

@@ -4,6 +4,8 @@
     <Name>PythonLW</Name>
     <RootNamespace>PythonLW</RootNamespace>
     <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <WebBrowserPort>
+    </WebBrowserPort>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -43,6 +45,13 @@
     <Compile Include="SocialApp\migrations\__init__.py" />
     <Compile Include="SocialApp\models.py" />
     <Compile Include="SocialApp\tests.py" />
+    <Compile Include="SocialApp\tests\test_models.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SocialApp\tests\test_views.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SocialApp\tests\__init__.py" />
     <Compile Include="SocialApp\urls.py">
       <SubType>Code</SubType>
     </Compile>
@@ -55,6 +64,7 @@
     <Content Include="SocialApp\static\assets\bootstrap\js\bootstrap.min.js" />
     <Content Include="SocialApp\static\assets\css\Footer-Basic.css" />
     <Content Include="SocialApp\static\assets\css\Header-Dark.css" />
+    <Content Include="SocialApp\static\assets\css\Header_Base.css" />
     <Content Include="SocialApp\static\assets\css\Index-Style.css" />
     <Content Include="SocialApp\static\assets\css\Login-Form-Dark.css" />
     <Content Include="SocialApp\static\assets\css\News-Basic.css" />
@@ -85,12 +95,10 @@
     <Content Include="SocialApp\static\assets\img\base.png" />
     <Content Include="SocialApp\static\assets\img\index.png" />
     <Content Include="SocialApp\static\assets\img\log_in.jpg" />
-    <Content Include="SocialApp\static\assets\img\mountain_bg.jpg" />
     <Content Include="SocialApp\static\assets\img\news.jpg" />
     <Content Include="SocialApp\static\assets\img\news_avatar.jpg" />
     <Content Include="SocialApp\static\assets\img\register_bg.png" />
     <Content Include="SocialApp\static\assets\img\screen-content-iphone-6.jpg" />
-    <Content Include="SocialApp\static\assets\img\Test-Site_Dan-Flavin_Untitled-featured.jpg" />
     <Content Include="SocialApp\static\assets\js\jquery.min.js" />
     <Content Include="SocialApp\templates\SocialApp\Base.html" />
     <Content Include="SocialApp\templates\SocialApp\Create_News.html" />
@@ -115,6 +123,7 @@
     <Folder Include="SocialApp\static\assets\js\" />
     <Folder Include="SocialApp\templates\" />
     <Folder Include="SocialApp\templates\SocialApp\" />
+    <Folder Include="SocialApp\tests\" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
