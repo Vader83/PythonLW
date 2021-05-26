@@ -9,9 +9,10 @@ from django.contrib.auth import (
 from .forms import (
 	UserLoginForm, 
 	UserRegisterForm,
-	NewsPostForm
+	NewsPostForm,
+	PostCommentForm
 )
-from .models import News
+from .models import News, Comment
 
 
 def error_404(request, exception):
@@ -93,7 +94,7 @@ def news_view(request):
 		page_number = 1
 
 	page_number = int(page_number)
-	page_capacity = 2
+	page_capacity = 3
 
 	if len(news) % page_capacity != 0:
 		page_count = len(news) // page_capacity + 1
@@ -111,6 +112,27 @@ def news_view(request):
 		'page_count':range(1, page_count + 1)
 	}
 	return render(request, 'SocialApp/News.html', context)
+
+@login_required
+def post_view(request, id):
+	post = News.objects.get(id=id)
+	comments = Comment.objects.filter(news__id = id)
+	form = PostCommentForm(request.POST or None)
+
+	if form.is_valid():
+		comment = form.save(commit = False)
+		comment.news = post
+		comment.user = request.user
+		comment.save()
+		return redirect('social_post',id)
+
+	context = {
+		'form':form,
+		'post':post,
+		'comments':comments,
+		}
+	return render(request, "SocialApp/Post.html", context)
+
 
 
 def logout_view(request):

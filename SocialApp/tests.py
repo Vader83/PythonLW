@@ -10,16 +10,6 @@ class ViewsTestCase(TestCase):
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
 
-    def test_create_news_loads_properly(self):
-        url = reverse('social_create_news')
-        response = self.client.get(url)
-        self.assertEqual(response.status_code, 200)
-
-    def test_news_loads_properly(self):
-        url = reverse('social_news')
-        response = self.client.get(url)
-        self.assertEqual(response.status_code, 200)
-
     def test_login_loads_properly(self):
         url = reverse('social_login')
         response = self.client.get(url)

@@ -105,7 +105,6 @@
     <Content Include="SocialApp\templates\SocialApp\Index.html" />
     <Content Include="SocialApp\templates\SocialApp\Log_In.html" />
     <Content Include="SocialApp\templates\SocialApp\News.html" />
-    <Content Include="SocialApp\templates\SocialApp\profile.html" />
     <Content Include="SocialApp\templates\SocialApp\Sign_Up.html" />
   </ItemGroup>
   <ItemGroup>

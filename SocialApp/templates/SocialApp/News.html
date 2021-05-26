@@ -27,7 +27,7 @@
                             </div>
 
                             <div class="media-body" style="margin: 10px;">
-                                <h5 style="margin-right: 16px;font-size: 32px;"> {{ new.subject }} </h5>
+                                <a class="btn btn-primary" role="button" style="background-color: rgba(0,123,255,0); border: 0px; ;color: rgb(47,41,46);font-size: 32px;font-weight: 500;" href="{% url 'social_post' new.id %}"> {{ new.subject }} </a>
                                 <p class="text-justify" style="margin-right: 16px;font-size: 24px;"> {{ new.text }} </p>
                             </div>
 

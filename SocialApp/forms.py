@@ -3,7 +3,7 @@ from django.contrib.auth import (
 	authenticate,
 	get_user_model
 )
-from .models import News
+from .models import News, Comment
 
 User = get_user_model()
 
@@ -114,5 +114,35 @@ class NewsPostForm(forms.ModelForm):
 		if not text:
 			raise forms.ValidationError("Text field couldn`t be empty")
 		return text
+
+
+class PostCommentForm(forms.ModelForm):
+	comment = forms.CharField(
+		label='', 
+		widget=forms.Textarea(attrs={
+			'style'			: 'width: 1340px; height: 150px;', 
+			'placeholder'	: 'Input your comment',
+			'autocomplete'	: 'off',
+			'required'		: 'true',
+			'spellcheck'	: 'true'}))
+	
+	class Meta:
+		model = Comment
+		fields = [
+			'comment'
+			]
+
+	def clean(self, *args, **kwargs):
+		comment = self.cleaned_data.get('comment')
+		if not comment:
+			raise forms.ValidationError("Subject field couldn`t be empty")
+		return super(PostCommentForm, self).clean(*args, **kwargs)
+
+	def clean_comment(self):
+		comment = self.cleaned_data.get('comment')
+		if not comment:
+			raise forms.ValidationError("comment field couldn`t be empty")
+		return comment
+
 
 

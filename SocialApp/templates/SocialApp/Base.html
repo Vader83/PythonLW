@@ -27,15 +27,22 @@
         <div class="main-header">
             <div class="header-dark">
                 <nav class="navbar navbar-dark navbar-expand-lg header-dark navbar">
-                    <div class="container"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button><a class="navbar-brand" href="{% url 'social_news' %}" style="margin-left: 0px;">News</a>
+                    <div class="container">
+                        <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+                            <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
+                        </button>
+                        <a class="navbar-brand" href="{% url 'social_news' %}" style="margin-left: 0px;">News</a>
                         <div
                             class="collapse navbar-collapse" id="navcol-1">
                             <ul class="nav navbar-nav" style="margin-right: auto;">
                                 <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'social_create_news' %}">Create news</a></li>
                             </ul>
-                            {% if  request.user.is_authenticated %}
-                                <span class="navbar-text"><a class="login" href="{% url 'social_logout' %}">Log Out</a></span>
+                            {% if  request.user.is_authenticated %}                            
+                                <span class="navbar-text">                                 
+                                    <a class="login" href="{% url 'social_logout' %}">Log Out</a>
+                                </span>
                                 <img class="rounded-circle img-fluid d-xl-flex" style="max-width: 75px;" src={% static 'assets/img/profile_avatar.jpg' %}/>
+                                <strong>Hello, {{ request.user.username }}!</strong>
                             {% else %}
                                 <span class="navbar-text"><a class="login" href="{% url 'social_login' %}">Log In</a></span>    
                                 <a class="btn btn-light action-button" role="button" href="{% url 'social_signup' %}">Sign Up</a>
